@@ -40,7 +40,7 @@ The API will be available at `http://localhost:8080`
 ## Roadmap
 
 - [x] Project initialization with Spring Boot
-- [ ] Movie model (title, year, genre, director)
+- [X] Movie model (title, year, genre, director)
 - [ ] GET all movies
 - [ ] GET movie by ID
 - [ ] POST create a new movie
