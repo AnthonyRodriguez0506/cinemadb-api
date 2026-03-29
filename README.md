@@ -40,10 +40,10 @@ The API will be available at `http://localhost:8080`
 ## Roadmap
 
 - [x] Project initialization with Spring Boot
-- [ ] Movie model (title, year, genre, director)
-- [ ] GET all movies
-- [ ] GET movie by ID
-- [ ] POST create a new movie
-- [ ] PUT update a movie
-- [ ] DELETE a movie
+- [X] Movie model (title, year, genre, director)
+- [X] GET all movies
+- [X] GET movie by ID
+- [X] POST create a new movie
+- [X] PUT update a movie
+- [X] DELETE a movie
 - [ ] Connect to a persistent database (PostgreSQL)
