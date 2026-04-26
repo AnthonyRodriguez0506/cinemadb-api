@@ -1,6 +1,6 @@
 # cinemadb-api
 
-A simple and scalable REST API for managing movies, built with Spring Boot. Inspired by OMDb, this project serves as a hands-on introduction to REST API development in Java.
+A simple and scalable REST API for managing movies, built with Spring Boot. Inspired by OMDb.
 
 ---
 
