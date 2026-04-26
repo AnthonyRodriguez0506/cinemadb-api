@@ -24,7 +24,7 @@ A simple and scalable REST API for managing movies, built with Spring Boot. Insp
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/cinemadb-api.git
+git clone https://github.com/AnthonyRodriguez0506/cinemadb-api.git
 
 # Navigate into the project
 cd cinemadb-api
