@@ -46,5 +46,6 @@ The API will be available at `http://localhost:8080`
 - [X] POST create a new movie
 - [X] PUT update a movie
 - [X] DELETE a movie
-- [ ] Connect to PostgreSQL for production
+- [ ] Connect to a persistent database (PostgreSQL)
 - [ ] Dockerize the application
+- [ ] API documentation with Swagger
