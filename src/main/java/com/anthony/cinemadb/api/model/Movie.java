@@ -1,7 +1,17 @@
 package com.anthony.cinemadb.api.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Movie {
 
+    public Movie() {}
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String title;
     private Integer year;
@@ -9,7 +19,6 @@ public class Movie {
     private Float rating;
     private String director;
 
-    // Constructor
     public Movie(Integer id, String title, Integer year, Integer duration, Float rating, String director) {
         this.id = id;
         this.title = title;
@@ -18,8 +27,6 @@ public class Movie {
         this.rating = rating;
         this.director = director;
     }
-
-    // Getters
 
     public Integer getId() {
         return id;
@@ -45,7 +52,6 @@ public class Movie {
         return director;
     }
 
-    // Setters
     public void setId(Integer id) {
         this.id = id;
     }

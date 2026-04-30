@@ -1,28 +1,30 @@
 package com.anthony.cinemadb.api.service;
 import com.anthony.cinemadb.api.model.Movie;
+import com.anthony.cinemadb.api.repository.MovieRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import java.util.ArrayList;
 import java.util.List;
+
+import static org.antlr.v4.runtime.tree.xpath.XPath.findAll;
 
 @Service
 
 public class MovieService {
-    private List<Movie> movies = new ArrayList<>();
+
+    @Autowired
+    private MovieRepository movieRepository;
 
     public List<Movie> getAllMovies () {
-        return movies;
+        return movieRepository.findAll();
     }
 
     public Movie getMovieById(Integer id) {
-        return movies.stream()
-                .filter(movie -> movie.getId() == id)
-                .findFirst()
+        return movieRepository.findById(id)
                 .orElse(null);
     }
 
-    public Movie createMovie (Movie movie) {
-            movies.add(movie);
-        return movie;
+    public Movie createMovie(Movie movie) {
+        return movieRepository.save(movie);
     }
 
     public Movie updateMovie (Integer id, Movie movie) {
@@ -32,12 +34,10 @@ public class MovieService {
         existingMovie.setDuration(movie.getDuration());
         existingMovie.setRating(movie.getRating());
         existingMovie.setDirector(movie.getDirector());
-        return existingMovie;
+        return movieRepository.save(existingMovie);
     }
 
     public void deleteMovie (Integer id) {
-        Movie deletingMovie = getMovieById(id);
-        movies.remove(deletingMovie);
+        movieRepository.deleteById(id);
     }
-
 }
