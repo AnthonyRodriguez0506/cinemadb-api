@@ -137,9 +137,3 @@ http://localhost:8080/swagger-ui/index.html
 - [x] Connect to a persistent database (PostgreSQL)
 - [x] API documentation with Swagger
 - [x] Dockerize the application
-
----
-
-## Author
-
-**Anthony Rodriguez** — [@AnthonyRodriguez0506](https://github.com/AnthonyRodriguez0506)
