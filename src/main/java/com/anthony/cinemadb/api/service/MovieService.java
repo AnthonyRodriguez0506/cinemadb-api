@@ -5,8 +5,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
-import static org.antlr.v4.runtime.tree.xpath.XPath.findAll;
-
 @Service
 
 public class MovieService {
@@ -37,7 +35,11 @@ public class MovieService {
         return movieRepository.save(existingMovie);
     }
 
-    public void deleteMovie (Integer id) {
+    public String deleteMovie (Integer id) {
+        if (getMovieById(id) == null) {
+           return "El elemento que desea eliminar no existe";
+        }
         movieRepository.deleteById(id);
+        return "Elemento eliminado correctamente";
     }
 }
