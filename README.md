@@ -45,8 +45,6 @@ cp .env.example .env
 docker compose up
 ```
 
-The API will be available at `http://localhost:8080`
-
 ---
 
 ### Option 2 — Manual Setup
@@ -73,8 +71,6 @@ cp src/main/resources/application.yaml.example src/main/resources/application.ya
 ./mvnw spring-boot:run
 ```
 
-The API will be available at `http://localhost:8080`
-
 ---
 
 ## Environment Variables
@@ -82,7 +78,7 @@ The API will be available at `http://localhost:8080`
 Create a `.env` file in the root of the project with the following variables:
 
 ```env
-DB_NAME=cinemadb
+DB_NAME=your_db
 DB_USER=your_username
 DB_PASSWORD=your_password
 ```
@@ -91,7 +87,11 @@ DB_PASSWORD=your_password
 
 ## API Endpoints
 
-Base URL: `http://localhost:8080`
+**Base URL** (Postman / REST client)
+`http://localhost:8080`
+
+**Interactive API Documentation** (Swagger UI)
+`http://localhost:8080/swagger-ui/index.html`
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
@@ -111,16 +111,6 @@ Base URL: `http://localhost:8080`
   "rating": 8.8,
   "director": "Christopher Nolan"
 }
-```
-
----
-
-## API Documentation (Swagger)
-
-Once the application is running, access the interactive API documentation at:
-
-```
-http://localhost:8080/swagger-ui/index.html
 ```
 
 ---
